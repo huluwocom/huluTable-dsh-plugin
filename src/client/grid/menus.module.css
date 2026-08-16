@@ -1,0 +1,88 @@
+.menu {
+  position: fixed;
+  z-index: 120;
+  min-width: 168px;
+  max-height: 420px;
+  overflow: auto;
+  padding: 4px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 8px;
+  background: var(--dsw-alias-bg-layer-1);
+  box-shadow: var(--dsw-shadow-lv-2);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.danger {
+  color: var(--dsw-alias-state-error-primary);
+}
+
+.sep {
+  height: 1px;
+  margin: 4px 6px;
+  background: var(--dsw-alias-border-l2);
+}
+
+.renameBox {
+  padding: 4px;
+}
+
+.renameInput {
+  width: 100%;
+  height: 26px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--dsw-alias-border-strong);
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 12px;
+}
+
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 4px 6px;
+}
+
+.typeCell {
+  height: 26px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.typeCell:hover {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.typeActive {
+  background: color-mix(in srgb, var(--dsw-alias-accent, #4f8cff) 14%, transparent);
+  color: var(--dsw-alias-label-primary);
+  font-weight: 600;
+}

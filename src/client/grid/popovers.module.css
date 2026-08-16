@@ -1,0 +1,137 @@
+.popover {
+  position: fixed;
+  z-index: 130;
+  min-width: 200px;
+  max-width: 320px;
+  max-height: 320px;
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 8px;
+  background: var(--dsw-alias-bg-layer-1);
+  box-shadow: var(--dsw-shadow-lv-2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dsw-alias-label-primary);
+}
+
+.select {
+  height: 26px;
+  padding: 0 6px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 180px;
+  overflow: auto;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-primary);
+  cursor: pointer;
+}
+
+.optionButton {
+  width: 100%;
+  padding: 4px 6px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  text-align: left;
+}
+
+.optionButton:hover {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.checked {
+  background: color-mix(in srgb, var(--dsw-alias-accent, #4f8cff) 12%, transparent);
+}
+
+.chip {
+  flex: none;
+  padding: 1px 8px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9px;
+  font-size: 11px;
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.checkMark {
+  margin-left: auto;
+  color: var(--dsw-alias-accent, #4f8cff);
+  font-weight: 700;
+}
+
+.valueRow {
+  display: flex;
+  gap: 4px;
+}
+
+.valueInput {
+  flex: 1;
+  min-width: 0;
+  height: 26px;
+  padding: 0 8px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 12px;
+}
+
+.customRow {
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.clearButton,
+.applyButton {
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.clearButton {
+  border: 1px solid var(--dsw-alias-border-l2);
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+}
+
+.applyButton {
+  border: none;
+  background: var(--dsw-alias-button-elevated-fill);
+  color: var(--dsw-alias-label-primary);
+  font-weight: 500;
+}

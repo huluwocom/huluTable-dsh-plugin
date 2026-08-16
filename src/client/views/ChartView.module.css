@@ -1,0 +1,50 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  padding: 16px;
+  gap: 12px;
+  background: var(--dsw-alias-bg-layer-1);
+}
+
+.title {
+  flex: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dsw-alias-label-primary);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.chartBox {
+  flex: none;
+  max-width: 100%;
+  border: 1px solid var(--dsw-alias-border-l);
+  border-radius: 8px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 6px;
+}
+
+.emptyTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dsw-alias-label-primary);
+}
+
+.emptyBody {
+  font-size: 12px;
+  color: var(--dsw-alias-label-secondary);
+}

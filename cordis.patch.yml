@@ -1,0 +1,18 @@
+# huluTable bundle layer — applied after the app bundles in the profile's
+# layer order (dsh.profile.bundles).
+#
+# The dsh-web-app bundle ships a built-in `ui-hulutable` roster row pointing
+# at the workspace package `@deepseek-ai/dsh-client-ui-hulutable`. Patches
+# cannot rename a row, so this layer disables the built-in row and inserts
+# this standalone bundle's own row. The two patches are independent:
+# - the disable is skipped (with a warning) when the built-in row is absent;
+# - the insert always registers `dsh-hulutable-plugin`.
+#
+# A row becomes part of the browser roster through the package's `dsh.client`
+# manifest together with its "./client" export; the same row is also a host
+# row (node half: an empty apply plus the invariant companion).
+- id: ui-hulutable
+  disabled: true
+- insert:
+    - id: hulutable
+      name: dsh-hulutable-plugin

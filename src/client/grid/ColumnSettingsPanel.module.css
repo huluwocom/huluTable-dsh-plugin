@@ -1,0 +1,187 @@
+.panel {
+  position: fixed;
+  z-index: 130;
+  width: 360px;
+  max-height: 520px;
+  overflow: auto;
+  padding: 12px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 10px;
+  background: var(--dsw-alias-bg-layer-1);
+  box-shadow: var(--dsw-shadow-lv-2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dsw-alias-label-primary);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  flex: none;
+  width: 56px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.input {
+  background: var(--dsw-alias-bg-layer-1);
+  flex: 1;
+  min-width: 0;
+  height: 26px;
+  padding: 0 8px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 12px;
+}
+
+.checkLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-primary);
+  cursor: pointer;
+}
+
+.section {
+  padding-top: 6px;
+  border-top: 1px solid var(--dsw-alias-border-l2);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dsw-alias-label-primary);
+}
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 160px;
+  overflow: auto;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.colorSwatch {
+  flex: none;
+  width: 26px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.remove {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--dsw-alias-label-secondary);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.remove:hover {
+  background: var(--dsw-alias-interactive-bg-hover);
+  color: var(--dsw-alias-state-error-primary);
+}
+
+.addButton {
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.mapBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 180px;
+  overflow: auto;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.mapRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mapKey {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--dsw-alias-label-primary);
+}
+
+.mapValues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+}
+
+.mapValue {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  color: var(--dsw-alias-label-secondary);
+  cursor: pointer;
+}
+
+.mapHint {
+  font-size: 11px;
+  color: var(--dsw-alias-label-secondary);
+  line-height: 1.5;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.done {
+  height: 28px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  background: var(--dsw-alias-button-elevated-fill);
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}

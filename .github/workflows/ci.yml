@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    # The bundle build is fully self-contained: tsdown transpiles src/ with
+    # no monorepo and no SDK packages.
+    name: Build bundle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
+      - name: Verify artifacts
+        run: |
+          test -f lib/index.js
+          test -f lib/invariant.js
+          test -f lib/client.js
+          head -c 200 lib/client.js | grep -q "__ModuleLoader__"
+
+  typecheck-test:
+    # Type-checking and tests need the unpublished SDK packages, so this job
+    # checks out deepseek-harness and links it via scripts/link-sdk.mjs.
+    name: Type-check and test (SDK-linked)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: HuluTable
+      - uses: actions/checkout@v4
+        with:
+          repository: deepseek-ai/deepseek-harness
+          path: deepseek-harness
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install and link SDK
+        working-directory: HuluTable
+        run: node scripts/link-sdk.mjs ../deepseek-harness
+      - name: Type-check
+        working-directory: HuluTable
+        run: pnpm run typecheck
+      - name: Lint
+        working-directory: HuluTable
+        run: pnpm run lint
+      - name: Test
+        working-directory: HuluTable
+        run: pnpm run test
