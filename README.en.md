@@ -1,9 +1,9 @@
 # huluTable
 
 > A DeepSeek Harness Web client plugin: a "Tables" trigger in the sidebar footer plus a full-viewport table workspace — foolproof online-table data management.
-> No database, no server: all data lives in the browser's IndexedDB and works out of the box.
+> No database, no server: all data lives in the browser's IndexedDB and works out of the box. Current release: **v0.1**.
 
-[中文](./README.md) · [License](./LICENSE) · [Changelog](./CHANGELOG.md) · [Pre-release checklist](./docs/OPEN-SOURCE-CHECKLIST.md)
+[中文](./README.zh.md) · [License](./LICENSE) · [Changelog](./CHANGELOG.md)
 
 huluTable brings an online spreadsheet into DeepSeek Harness: a table library, a virtualized grid editor, 18 column types, formulas, filters and sorts, kanban/calendar/chart views, Excel import/export and more. Double-click a cell to edit, drag the corner to fill series, right-click for row/column menus — every change is undoable.
 
@@ -11,15 +11,15 @@ huluTable brings an online spreadsheet into DeepSeek Harness: a table library, a
 
 | Table library | Grid editor |
 |---|---|
-| ![Table library](./docs/screenshots/01-library.png) | ![Grid editor](./docs/screenshots/02-grid.png) |
+| ![Table library](./docs/screenshots-en/01-library.png) | ![Grid editor](./docs/screenshots-en/02-grid.png) |
 
 | Kanban | Calendar | Chart |
 |---|---|---|
-| ![Kanban](./docs/screenshots/03-kanban.png) | ![Calendar](./docs/screenshots/04-calendar.png) | ![Chart](./docs/screenshots/05-chart.png) |
+| ![Kanban](./docs/screenshots-en/03-kanban.png) | ![Calendar](./docs/screenshots-en/04-calendar.png) | ![Chart](./docs/screenshots-en/05-chart.png) |
 
 | Goals | Excel import | Column menu |
 |---|---|---|
-| ![Goals](./docs/screenshots/06-goals.png) | ![Import](./docs/screenshots/07-import.png) | ![Column menu](./docs/screenshots/08-column-menu.png) |
+| ![Goals](./docs/screenshots-en/06-goals.png) | ![Import](./docs/screenshots-en/07-import.png) | ![Column menu](./docs/screenshots-en/08-column-menu.png) |
 
 ## Features
 
@@ -51,7 +51,7 @@ dsh web                          # open http://127.0.0.1:3080
 ### Option 2 — install from GitHub (source + automatic build)
 
 ```sh
-dsh plugin --profile web add github:<your-account>/HuluTable
+dsh plugin --profile web add github:huluwocom/HuluTable
 ```
 
 This repository's `prepare` script builds `lib/` straight from `src/` (self-contained transpilation — no monorepo, no type-checking). pnpm ≥10 refuses to run git dependencies' build scripts until you allow it: copy the exact package key `dsh` prints into that profile's `pnpm-workspace.yaml`:

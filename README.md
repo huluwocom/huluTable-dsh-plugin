@@ -3,7 +3,7 @@
 > A DeepSeek Harness Web client plugin: a "Tables" trigger in the sidebar footer plus a full-viewport table workspace — foolproof online-table data management.
 > No database, no server: all data lives in the browser's IndexedDB and works out of the box. Current release: **v0.1**.
 
-[中文](./README.zh.md) · [License](./LICENSE) · [Changelog](./CHANGELOG.md) · [Pre-release checklist](./docs/OPEN-SOURCE-CHECKLIST.md)
+[中文](./README.zh.md) · [License](./LICENSE) · [Changelog](./CHANGELOG.md)
 
 huluTable brings an online spreadsheet into DeepSeek Harness: a table library, a virtualized grid editor, 18 column types, formulas, filters and sorts, kanban/calendar/chart views, Excel import/export and more. Double-click a cell to edit, drag the corner to fill series, right-click for row/column menus — every change is undoable.
 

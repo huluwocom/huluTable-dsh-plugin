@@ -3,7 +3,7 @@
 > DeepSeek Harness Web 客户端插件：侧边栏「表格」入口 + 全屏表格工作台，提供傻瓜化的在线表格数据管理。
 > 无需数据库、无需服务端 —— 所有数据保存在浏览器 IndexedDB，开箱即用。当前版本：**v0.1**。
 
-[English](./README.md) · [许可证](./LICENSE) · [更新日志](./CHANGELOG.md) · [开源前检查清单](./docs/OPEN-SOURCE-CHECKLIST.zh.md)
+[English](./README.md) · [许可证](./LICENSE) · [更新日志](./CHANGELOG.md)
 
 huluTable 把「在线表格」装进 DeepSeek Harness：表格库、虚拟滚动网格、16 种列类型、公式、筛选排序、看板/日历/图表视图、Excel 导入导出、自然语言修改表格。双击单元格开始编辑，拖拽填充序列，右键管理行列，所有操作可撤销。
 
